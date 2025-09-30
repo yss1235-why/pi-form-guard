@@ -1,6 +1,6 @@
 import React from "react";
 import { AlertCircle } from "lucide-react";
-import PiLogo from "./PiLogo";
+import PiLogo from "@/components/PiLogo";
 
 const BrowserGate: React.FC = () => {
   return (
@@ -12,23 +12,16 @@ const BrowserGate: React.FC = () => {
           </div>
           
           <div className="flex items-center gap-3 mb-4">
-  <AlertCircle className="text-accent w-6 h-6" />
-  <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-    Pi Browser Required
-  </h1>
-</div>
+            <AlertCircle className="text-accent w-6 h-6" />
+            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Pi Browser Required
+            </h1>
+          </div>
 
-<p className="text-foreground mb-6 leading-relaxed">
-  This application is exclusively available through Pi Browser to ensure secure access 
-  within the Pi Network ecosystem.
-</p>
-
-<div className="mb-6 p-4 bg-yellow-100 border-2 border-yellow-500 rounded-lg">
-  <h3 className="font-bold text-black mb-2">Debug Information:</h3>
-  <p className="text-xs text-black break-all">
-    <strong>User Agent:</strong> {navigator.userAgent}
-  </p>
-</div>
+          <p className="text-foreground mb-6 leading-relaxed">
+            This application is exclusively available through Pi Browser to ensure secure access 
+            within the Pi Network ecosystem.
+          </p>
           
           <div className="space-y-4">
             <div className="bg-muted/50 rounded-lg p-4">
