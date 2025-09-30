@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { isPiBrowser } from "@/utils/browserDetection";
+import { isPiBrowserAvailable } from "@/utils/browserDetection";
 import { getSubmissions, clearSubmissions, Submission } from "@/utils/dataStorage";
 import BrowserGate from "@/components/BrowserGate";
 import PiLogo from "@/components/PiLogo";
@@ -21,8 +21,8 @@ const Admin = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
 
-  // For development, you can temporarily set this to true to bypass browser check
-  const isAuthorized = isPiBrowser() || true; // Remove "|| true" in production
+ // For development, you can temporarily set this to true to bypass browser check
+  const isAuthorized = isPiBrowserAvailable() || true; // Remove "|| true" in production
 
   useEffect(() => {
     loadSubmissions();
