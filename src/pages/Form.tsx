@@ -95,7 +95,7 @@ const Form = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-accent hover:opacity-90 text-accent-foreground font-semibold py-6 text-lg transition-all hover:scale-[1.02] shadow-glow-accent disabled:opacity-50 disabled:hover:scale-100"
+               className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
               >
                 {isSubmitting ? (
                   <>
