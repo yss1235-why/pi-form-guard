@@ -63,7 +63,7 @@ const Form = () => {
       />
       
       {hasAcceptedRules && (
-        <div className="container mx-auto px-6 py-12 max-w-2xl">
+       <div className="px-6 py-12">
          
           <div className="backdrop-blur-md bg-white/70 rounded-2xl shadow-glass border border-white/20 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
