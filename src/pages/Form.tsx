@@ -105,17 +105,7 @@ const Form = () => {
               </Button>
             </form>
 
-            <div className="mt-8 space-y-4">
-              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg">
-                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-               
-              </div>
-
-              <div className="flex items-start gap-3 p-4 bg-accent/5 rounded-lg">
-                <AlertCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                
-              </div>
-            </div>
+           
           </div>
 
          
