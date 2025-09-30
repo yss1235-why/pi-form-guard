@@ -62,7 +62,7 @@ const Form = () => {
       {hasAcceptedRules && (
        <div className="px-6 py-12">
          
-          <div className="backdrop-blur-md bg-white/70 rounded-2xl shadow-glass border border-white/20 p-8">
+          <div className="">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
   <label htmlFor="submission" className="block text-sm font-medium text-foreground mb-2">
