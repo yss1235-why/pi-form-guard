@@ -21,11 +21,11 @@ const PiBrowserRedirect: React.FC = () => {
 
     if (isAndroid) {
       // Android Intent URL approach
-      const intentURL = `intent://${currentURL.replace(/^https?:\/\//, '')}#Intent;` +
-        `scheme=https;` +
-        `package=com.blockchainvault.browser;` +
-        `S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.blockchainvault.browser;` +
-        `end`;
+     const intentURL = `intent://${currentURL.replace(/^https?:\/\//, '')}#Intent;` +
+  `scheme=https;` +
+  `package=pi.browser;` +
+  `S.browser_fallback_url=https://play.google.com/store/apps/details?id=pi.browser;` +
+  `end`;
       
       redirectURL = intentURL;
     } else if (isIOS) {
