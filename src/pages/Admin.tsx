@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { isPiBrowserAvailable } from "@/utils/browserDetection";
+import { isPiBrowser } from "@/utils/browserDetection";
 import { getSubmissions, clearSubmissions, Submission } from "@/utils/dataStorage";
 import BrowserGate from "@/components/BrowserGate";
 import PiLogo from "@/components/PiLogo";
@@ -21,8 +21,9 @@ const Admin = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
 
- // For development, you can temporarily set this to true to bypass browser check
-  const isAuthorized = isPiBrowserAvailable() || true; // Remove "|| true" in production
+  if (!isPiBrowser()) {
+    return <BrowserGate />;
+  }
 
   useEffect(() => {
     loadSubmissions();
@@ -59,10 +60,6 @@ const Admin = () => {
       minute: "2-digit",
     });
   };
-
-  if (!isAuthorized) {
-    return <BrowserGate />;
-  }
 
   return (
     <div className="min-h-screen bg-gradient-background">
