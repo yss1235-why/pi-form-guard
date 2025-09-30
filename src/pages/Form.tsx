@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 
 const Form = () => {
-  const [hasAcceptedRules, setHasAcceptedRules] = useState(false);
+ const [hasAcceptedRules, setHasAcceptedRules] = useState(true);
   const [inputValue, setInputValue] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -57,10 +57,7 @@ const Form = () => {
 
   return (
     <div className="min-h-screen bg-gradient-background">
-      <RulesModal 
-        isOpen={!hasAcceptedRules} 
-        onAccept={() => setHasAcceptedRules(true)} 
-      />
+    
       
       {hasAcceptedRules && (
        <div className="px-6 py-12">
