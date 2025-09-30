@@ -78,13 +78,13 @@ const Form = () => {
                 <label htmlFor="submission" className="block text-sm font-medium text-foreground mb-2">
                   Your Submission
                 </label>
-                <Input
+               <Input
                   id="submission"
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Enter your information here..."
-                  className="w-full px-4 py-3 bg-white/50 border-2 border-border focus:border-accent transition-colors"
+                  className="w-full px-4 py-8 bg-white/50 border-2 border-border focus:border-accent transition-colors text-lg"
                   disabled={isSubmitting}
                 />
                 <p className="text-xs text-muted-foreground mt-2">
