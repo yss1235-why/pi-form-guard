@@ -89,8 +89,8 @@ const Form = () => {
                   </>
                 ) : (
                   <>
-                    <Send className="mr-2 w-5 h-5" />
-                    Submit Information
+                   
+                    Submit
                   </>
                 )}
               </Button>
