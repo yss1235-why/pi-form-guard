@@ -70,7 +70,7 @@ const Form = () => {
               <div>
                
                        <Input
-                            <Input
+                           
                       id="submission"
                       type="text"
                       value={inputValue}
@@ -96,23 +96,32 @@ const Form = () => {
                
               </div>
 
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-               className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-2 border-accent-foreground border-t-transparent mr-2" />
-                    Submitting...
-                  </>
-                ) : (
-                  <>
-                   
-                    Submit
-                  </>
-                )}
-              </Button>
+             <div className="space-y-4">
+  <Button
+    type="submit"
+    disabled={isSubmitting}
+    className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
+  >
+    {isSubmitting ? (
+      <>
+        <div className="animate-spin rounded-full h-5 w-5 border-2 border-accent-foreground border-t-transparent mr-2" />
+        Submitting...
+      </>
+    ) : (
+      <>
+        Submit
+      </>
+    )}
+  </Button>
+
+  <Button
+    type="button"
+    onClick={() => window.location.href = ""}
+    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02]"
+  >
+    Go to External Link
+  </Button>
+</div>
             </form>
 
            
