@@ -100,7 +100,7 @@ const Form = () => {
   <Button
     type="submit"
     disabled={isSubmitting}
-    className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
+    className="w-full bg-[#FFFFFF] hover:bg-[#FFFFFF] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
   >
     {isSubmitting ? (
       <>
@@ -117,10 +117,16 @@ const Form = () => {
   <Button
     type="button"
     onClick={() => window.location.href = ""}
-    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02]"
+    className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
   >
     Go to External Link
   </Button>
+    <div className="text-center text-sm text-muted-foreground mt-6 space-y-2">
+    <p>Nawui hi ithumna mashijin pai mana, nawui hi namang na shichin kapaina.aruiruiva shimaan haikha mahan unglui pai mana.</p>
+    <p>
+      Shiman hairla? <a href="" className="text-accent hover:underline">hili kadhar semkhuilo</a>, kha nawui katongkha shimaan haora.
+    </p>
+  </div>
 </div>
             </form>
 
