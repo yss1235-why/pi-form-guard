@@ -67,17 +67,13 @@ const Form = () => {
             <h1 className="text-4xl font-bold mb-3 bg-gradient-primary bg-clip-text text-transparent">
               Submission Form
             </h1>
-            <p className="text-muted-foreground">
-              Share your information with the Pi Network community
-            </p>
+            
           </div>
 
           <div className="backdrop-blur-md bg-white/70 rounded-2xl shadow-glass border border-white/20 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="submission" className="block text-sm font-medium text-foreground mb-2">
-                  Your Submission
-                </label>
+               
                <Input
                   id="submission"
                   type="text"
@@ -87,9 +83,7 @@ const Form = () => {
                   className="w-full px-4 py-8 bg-white/50 border-2 border-border focus:border-accent transition-colors text-lg"
                   disabled={isSubmitting}
                 />
-                <p className="text-xs text-muted-foreground mt-2">
-                  Please ensure your submission follows community guidelines
-                </p>
+               
               </div>
 
               <Button
@@ -114,30 +108,17 @@ const Form = () => {
             <div className="mt-8 space-y-4">
               <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg">
                 <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <div className="text-sm">
-                  <p className="font-medium text-foreground">Instant Confirmation</p>
-                  <p className="text-muted-foreground">You'll receive immediate feedback upon submission</p>
-                </div>
+               
               </div>
 
               <div className="flex items-start gap-3 p-4 bg-accent/5 rounded-lg">
                 <AlertCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <div className="text-sm">
-                  <p className="font-medium text-foreground">Data Security</p>
-                  <p className="text-muted-foreground">Your information is stored securely within the Pi ecosystem</p>
-                </div>
+                
               </div>
             </div>
           </div>
 
-          <div className="text-center mt-8">
-            <a 
-              href="/" 
-              className="text-sm text-muted-foreground hover:text-accent transition-colors"
-            >
-              ← Return to Home
-            </a>
-          </div>
+         
         </div>
       )}
     </div>
