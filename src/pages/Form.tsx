@@ -99,7 +99,7 @@ const Form = () => {
   <Button
   type="submit"
   disabled={isSubmitting}
-  className="w-full bg-white hover:bg-gray-50 text-[#692f8f] border-2 border-[#692f8f] font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
+ className="w-full bg-white hover:bg-gray-50 text-[#692f8f] border border-[#692f8f] font-semibold py-3 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
 >
     {isSubmitting ? (
       <>
@@ -116,7 +116,7 @@ const Form = () => {
   <Button
     type="button"
     onClick={() => window.location.href = ""}
-    className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-6 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
+   className="w-full bg-[#703d92] hover:bg-[#692f8f] text-white font-semibold py-3 text-lg transition-all hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
   >
     Go to External Link
   </Button>
