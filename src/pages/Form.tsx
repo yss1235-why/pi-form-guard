@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { isPiBrowser } from "@/utils/browserDetection";
 import { saveSubmission } from "@/utils/dataStorage";
-import BrowserGate from "@/components/BrowserGate";
 import RulesModal from "@/components/RulesModal";
 import PiLogo from "@/components/PiLogo";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import PiBrowserRedirect from "@/components/PiBrowserRedirect";
 
 const Form = () => {
  const [hasAcceptedRules, setHasAcceptedRules] = useState(true);
@@ -16,11 +15,7 @@ const Form = () => {
   const { toast } = useToast();
 
   // For development, you can temporarily set this to true to bypass browser check
- const isAuthorized = isPiBrowser();
 
-  if (!isAuthorized) {
-    return <BrowserGate />;
-  }
 
  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
@@ -55,12 +50,12 @@ const Form = () => {
   }, 500);
 };
 
-  return (
-    <div className="min-h-screen bg-gradient-background">
+ return (
+  <div className="min-h-screen bg-gradient-background">
+    <PiBrowserRedirect />
     
-      
-      {hasAcceptedRules && (
-       <div className="px-6 py-12">
+    {hasAcceptedRules && (
+      <div className="px-6 py-12">
          
           <div className="">
             <form onSubmit={handleSubmit} className="space-y-6">
