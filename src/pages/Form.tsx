@@ -16,7 +16,7 @@ const Form = () => {
   const { toast } = useToast();
 
   // For development, you can temporarily set this to true to bypass browser check
-  const isAuthorized = isPiBrowser() || true; // Remove "|| true" in production
+ const isAuthorized = isPiBrowser();
 
   if (!isAuthorized) {
     return <BrowserGate />;
