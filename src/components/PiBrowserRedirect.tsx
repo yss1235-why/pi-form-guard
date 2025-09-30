@@ -14,37 +14,7 @@ const PiBrowserRedirect: React.FC = () => {
   if (!isMobile || isInWebView || !showModal) {
     return null;
   }
-const handleOpenPiBrowser = () => {
-  // Create a temporary anchor element and trigger click
-  // This is required because Chrome only opens apps from actual link clicks
-  const currentURL = window.location.href;
-  const urlWithoutProtocol = currentURL.replace(/^https?:\/\//, '');
-  
-  let intentURL = '';
-  
-  if (isAndroid) {
-    // Correct Chrome Intent format for Android
-    intentURL = `intent://${urlWithoutProtocol}#Intent;` +
-      `scheme=https;` +
-      `package=pi.browser;` +
-      `S.browser_fallback_url=https://play.google.com/store/apps/details?id=pi.browser;` +
-      `end`;
-  } else if (isIOS) {
-    // iOS custom URL scheme
-    intentURL = `pi://${urlWithoutProtocol}`;
-  }
-  
-  if (intentURL) {
-    // Create and click a temporary link element
-    // Chrome requires user-initiated click on <a> tag
-    const tempLink = document.createElement('a');
-    tempLink.href = intentURL;
-    tempLink.style.display = 'none';
-    document.body.appendChild(tempLink);
-    tempLink.click();
-    document.body.removeChild(tempLink);
-  }
-};
+
 
   const handleCopyURL = () => {
     const currentURL = window.location.href;
