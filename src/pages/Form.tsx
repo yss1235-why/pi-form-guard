@@ -60,16 +60,7 @@ const Form = () => {
       
       {hasAcceptedRules && (
         <div className="container mx-auto px-6 py-12 max-w-2xl">
-          <div className="text-center mb-8">
-            <div className="flex justify-center mb-6">
-              <PiLogo size="md" />
-            </div>
-            <h1 className="text-4xl font-bold mb-3 bg-gradient-primary bg-clip-text text-transparent">
-              Submission Form
-            </h1>
-            
-          </div>
-
+         
           <div className="backdrop-blur-md bg-white/70 rounded-2xl shadow-glass border border-white/20 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
